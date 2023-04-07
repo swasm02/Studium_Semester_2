@@ -7,7 +7,7 @@ Machen Sie anschließend einen Screenshot von der IDE, in der der aktiv angespru
 Geben Sie das Bild ab.
 */
 
-public class Aufgabe_1 {
+public class Aufgabe1 {
     public static void main(String[] args) {
         String name = "Stefan Wasmer";
         System.out.println(name);
