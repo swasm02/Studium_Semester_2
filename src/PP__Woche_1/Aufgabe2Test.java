@@ -8,5 +8,4 @@ class Aufgabe2Test {
         assertEquals(d.divideNumbers(8,2),4, "should work");
         assertEquals(d.divideNumbers(6,2),2,"should explode");
     }
-
 }
