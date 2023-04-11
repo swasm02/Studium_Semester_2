@@ -19,20 +19,46 @@ Tipp: Die Reflections-API stellt unter anderem die Methoden getDeclaredMethod, s
 public class BankAccount {
     private int balance; // unit: EUR
 
+    //Aufgabenteil (a)
+    private int limit;
+
+    public int getLimit() {
+        return limit;
+    }
+
+    //Aufgabenteil (b)
+    public boolean withdraw_checked(int money) {
+        if (balance - money >= limit) {
+            return true;
+        } else {
+            System.out.println("Error, Dispokredit überzogen");
+            return false;
+        }
+    }
+
+    //Aufgabenteil (c)
+    public void test_withdraw_checked(int money) {
+        subFromBalance(money);
+    }
+
     private void addToBalance(int i) {
         balance += i;
     }
 
+    //added invariant
     private void subFromBalance(int i) {
-        balance -= i;
+        if (balance - i >= limit) balance -= i;
+        else System.out.println("Error, Dispo überzogen!");
     }
 
     public BankAccount() {
         balance = 0;
+        limit = 500;
     }
 
     public BankAccount(int i) {
         balance = i;
+        limit = 500;
     }
 
     public int getBalance() {
