@@ -1,5 +1,7 @@
 package PP__Woche_2;
 import java.lang.annotation.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 /*
 Aufgabe 3
@@ -22,22 +24,32 @@ Für die Eingabe können Sie dieses Beispielprogramm benutzen: https://www.w3sch
  */
 
 public class Person {
+    @Retention(RetentionPolicy.RUNTIME)
+    @interface information {
+        String version();
+        String description();
+    }
 
     @information(version = "1.0.0", description = "Vorname der Person")
-    private String Vorname;
+    public String Vorname;
 
     @information(version = "1.0.1", description = "Nachname der Person")
-    private String Nachname;
+    public String Nachname;
 
     @information(version = "1.0.2", description = "Das Jahr, in welchem die Person geboren wurde.")
-    private int Geburtsjahr;
+    public int Geburtsjahr;
 
     @information(version = "1.0.3", description = "Der Ort, in dem die Person geboren wurde.")
-    private String Geburtsort;
+    public String Geburtsort;
 
-    @Retention(RetentionPolicy.RUNTIME)
-    public @interface information {
-        public String version() default "";
-        public String description() default "";
+    public Person (String vor, String nach, int jahr, String ort) {
+        Vorname = vor;
+        Nachname = nach;
+        Geburtsjahr = jahr;
+        Geburtsort = ort;
+    }
+    public static void main(String[] args) {
+        //Aufgabenteil (b) nicht erledigt :(
+
     }
 }
