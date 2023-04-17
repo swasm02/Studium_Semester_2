@@ -1,6 +1,5 @@
 package PP__Woche_2;
 import java.lang.annotation.*;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /*
@@ -42,14 +41,23 @@ public class Person {
     @information(version = "1.0.3", description = "Der Ort, in dem die Person geboren wurde.")
     public String Geburtsort;
 
-    public Person (String vor, String nach, int jahr, String ort) {
-        Vorname = vor;
-        Nachname = nach;
-        Geburtsjahr = jahr;
-        Geburtsort = ort;
-    }
     public static void main(String[] args) {
-        //Aufgabenteil (b) nicht erledigt :(
+        try (Scanner scn = new Scanner (System.in)) {
+            Person x = new Person();
+            java.lang.reflect.Field[] fields = x.getClass().getDeclaredFields();
+            for (java.lang.reflect.Field f : fields) {
+                Annotation an = f.getDeclaredAnnotations()[0];
+                System.out.println();
+                System.out.println(((Person.information) an).description());
+                System.out.println(((Person.information) an).version());
+
+                if (f.getType() == String.class) {
+                    f.set(x, scn.nextLine());
+                } else if (f.getType() == int.class) f.setInt(x, Integer.parseInt(scn.nextLine()));
+            }
+        } catch(Exception e) {
+            System.out.println("ERROR");
+        }
 
     }
 }
