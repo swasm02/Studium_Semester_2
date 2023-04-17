@@ -7,12 +7,16 @@ public class Aufgabe1Test {
         Aufgabe1 test = new Aufgabe1();
 
         //positive Werte
-        assertEquals(test.divideNumbers(4,2),2, "should work");
+        assertEquals(test.divideNumbers(4,2),2);
 
         //negative Werte
-        assertEquals(test.divideNumbers(-4,2),-2, "should work");
+        assertEquals(test.divideNumbers(-4,2),-2);
+        assertEquals(test.divideNumbers(4,-2), -2);
+        assertEquals(test.divideNumbers(-4,2), -2);
 
         //Null
-        assertEquals(test.divideNumbers(4,0),0, "should not work ;(");
+        assertEquals(test.divideNumbers(4,0), Double.POSITIVE_INFINITY);
+        assertEquals(test.divideNumbers(-4,0), Double.NEGATIVE_INFINITY);
+        assertEquals(test.divideNumbers(0,0), Double.NaN);
     }
 }
