@@ -1,4 +1,4 @@
-package PP__Woche_2;
+package PP__Uebung_1;
 import java.lang.annotation.*;
 import java.util.Scanner;
 

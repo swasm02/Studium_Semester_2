@@ -1,4 +1,4 @@
-package PP__Woche_1;
+package PP__Uebung_0;
 
 public class Aufgabe3 {
     public long multiply(long[] numbers) {

@@ -1,4 +1,4 @@
-package PP__Woche_2;
+package PP__Uebung_1;
 
 /*
 a) In der Realität ermöglichen Banken bei üblichen Girokonten eine Überziehung in Form eines Dispokredits.

@@ -1,4 +1,4 @@
-package PP__Woche_2;
+package PP__Uebung_1;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class Aufgabe1Test {

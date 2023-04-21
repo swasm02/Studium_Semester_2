@@ -1,4 +1,4 @@
-package PP__Woche_1;
+package PP__Uebung_0;
 
 /*
 Erstellen Sie ein einfaches Hello-World-Programm, dass Ihren Namen einmal vorwärts und anschließend einmal rückwärts ausgibt.
