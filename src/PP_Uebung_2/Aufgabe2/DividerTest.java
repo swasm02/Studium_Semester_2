@@ -14,5 +14,10 @@ public class DividerTest {
             flag = true;
         }
         assertTrue(flag);
+
+        // besser:
+        assertThrows(DivideByZeroException.class, () -> {
+            Divider.divide(2,0);
+        });
     }
 }
